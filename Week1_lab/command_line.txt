@@ -1,0 +1,23 @@
+code to run in anaconda promt 1:
+
+mkdir laboratory1
+cd laboratory1
+
+Start the Airports microservice with the command:
+python airports.py
+
+code to run in anaconda promt 2:
+
+python -m unittest test-airports.py
+
+Summary of what the code does
+
+This lab focuses on developing a simple microservice to manage a database of airport codes and names using the RESTful Store archetype. The microservice is implemented using Flask and SQLite, demonstrating concepts such as the Repository and ORM design patterns for efficient database management.
+
+The database layer is built in `repository.py`, where functions for creating, clearing, inserting, updating, and retrieving records in SQLite are defined. This abstraction ensures clean separation between database operations and application logic.
+
+The microservice, implemented in `airports.py`, handles HTTP requests. A PUT endpoint allows users to add new airport records or update existing ones based on the airport code. The service returns appropriate HTTP status codes, such as `201 Created` for successful insertions and `204 No Content` for successful updates.
+
+Testing is performed with `test-airports.py`, leveraging Python's `unittest` framework. Tests validate the service's behavior, including clearing the database, adding records, and ensuring the correct status codes are returned for different scenarios.
+
+The lab also encourages enhancements, such as implementing additional functionality to retrieve records by airport code. This hands-on activity introduces REST principles, microservice architecture, SQLite database integration, and unit testing in a practical context.
