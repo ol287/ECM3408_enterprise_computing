@@ -21,3 +21,5 @@ The microservice, implemented in `airports.py`, handles HTTP requests. A PUT end
 Testing is performed with `test-airports.py`, leveraging Python's `unittest` framework. Tests validate the service's behavior, including clearing the database, adding records, and ensuring the correct status codes are returned for different scenarios.
 
 The lab also encourages enhancements, such as implementing additional functionality to retrieve records by airport code. This hands-on activity introduces REST principles, microservice architecture, SQLite database integration, and unit testing in a practical context.
+
+Flask : In this context, Flask is a web framework that allows you to create and manage HTTP endpoints (e.g., /airports/<string:code>). It enables handling HTTP methods like PUT, parsing JSON requests, and returning appropriate HTTP responses, effectively turning your Python application into a web service or API.
