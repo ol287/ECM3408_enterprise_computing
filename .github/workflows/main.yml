@@ -1,1 +1,21 @@
-python3 -m unittest -v test-factorial.py
+name: Run Python Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x' # Replace with your required Python version
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt || echo "No requirements file found, skipping."
+
+      - name: Run tests
+        run: python3 -m unittest -v test-factorial.py
